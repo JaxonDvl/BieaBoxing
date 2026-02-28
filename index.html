@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biea Boxing Gym - Sala de box profesionala in Timisoara. Box, Kickboxing, MMA, Autoaparare.">
+  <title>Biea Boxing Gym | Timișoara</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__container">
+      <a href="#hero" class="navbar__logo">
+        <span class="navbar__logo-text">BIEA BOXING</span>
+      </a>
+
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="#hero" class="navbar__link" data-i18n="nav.home">Acasă</a></li>
+        <li><a href="#about" class="navbar__link" data-i18n="nav.about">Despre Noi</a></li>
+        <li><a href="#schedule" class="navbar__link" data-i18n="nav.schedule">Program Clase</a></li>
+        <li><a href="#trainers" class="navbar__link" data-i18n="nav.trainers">Antrenori</a></li>
+        <li><a href="#events" class="navbar__link" data-i18n="nav.events">Evenimente</a></li>
+        <li><a href="#contact" class="navbar__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-toggle__option lang-toggle__option--active" data-lang="ro">RO</span>
+          <span class="lang-toggle__divider">|</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+
+        <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title" data-i18n="hero.title">BIEA BOXING GYM</h1>
+      <p class="hero__subtitle" data-i18n="hero.subtitle">Pasiune și excelență în boxul profesionist</p>
+      <div class="hero__cta-group">
+        <a href="#contact" class="btn btn--primary" data-i18n="hero.cta">Contactează-ne</a>
+        <a href="#about" class="btn btn--outline" data-i18n="hero.ctaSecondary">Descoperă mai mult</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT / SERVICES ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__tag" data-i18n="about.tag">Despre Noi</span>
+        <h2 class="section-header__title" data-i18n="about.title">Mai mult decât o sală de box</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__story reveal">
+          <p class="about__text" data-i18n="about.story1">
+            Fondată în 2014 de Flavius și Roxana Biea, Biea Boxing reprezintă pasiune și excelență în boxul profesionist. Între 2019-2023, evenimentele noastre au fost singurele gale recunoscute la nivel național și licențiate internațional din România.
+          </p>
+          <p class="about__text" data-i18n="about.story2">
+            Biea Boxing Gym este o sală profesionistă de antrenament care oferă cursuri de box, kickboxing, MMA și autoapărare pentru toate nivelurile — de la începători la avansați.
+          </p>
+        </div>
+
+        <div class="about__services reveal">
+          <div class="service-card" data-i18n-attr="title:services.boxing.name">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v9"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+            </div>
+            <h3 class="service-card__title" data-i18n="services.boxing.name">Box</h3>
+            <p class="service-card__desc" data-i18n="services.boxing.desc">Antrenament profesionist de box pentru toate nivelurile.</p>
+          </div>
+
+          <div class="service-card" data-i18n-attr="title:services.kickboxing.name">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="m9 20 3-8 3 8"/><path d="m6.5 14.5 5.5-2 5.5 2"/></svg>
+            </div>
+            <h3 class="service-card__title" data-i18n="services.kickboxing.name">Kickboxing</h3>
+            <p class="service-card__desc" data-i18n="services.kickboxing.desc">Tehnici de lovire cu picioarele și pumnii combinate.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <h3 class="service-card__title" data-i18n="services.mma.name">MMA</h3>
+            <p class="service-card__desc" data-i18n="services.mma.desc">Arte marțiale mixte — combinație completă de stiluri de luptă.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="service-card__title" data-i18n="services.selfDefense.name">Autoapărare</h3>
+            <p class="service-card__desc" data-i18n="services.selfDefense.desc">Cursuri practice de autoapărare pentru situații reale.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="service-card__title" data-i18n="services.kids.name">Copii</h3>
+            <p class="service-card__desc" data-i18n="services.kids.desc">Programe specializate pentru copii și juniori.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3 class="service-card__title" data-i18n="services.corporate.name">Corporate</h3>
+            <p class="service-card__desc" data-i18n="services.corporate.desc">Sesiuni de team-building pentru companii.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SCHEDULE ========== -->
+  <section class="schedule" id="schedule">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__tag" data-i18n="schedule.tag">Program</span>
+        <h2 class="section-header__title" data-i18n="schedule.title">Program Clase</h2>
+      </div>
+
+      <div class="schedule__table-wrap reveal">
+        <table class="schedule__table" id="scheduleTable">
+          <thead>
+            <tr>
+              <th data-i18n="schedule.time">Ora</th>
+              <th data-i18n="schedule.mon">Luni</th>
+              <th data-i18n="schedule.tue">Marți</th>
+              <th data-i18n="schedule.wed">Miercuri</th>
+              <th data-i18n="schedule.thu">Joi</th>
+              <th data-i18n="schedule.fri">Vineri</th>
+              <th data-i18n="schedule.sat">Sâmbătă</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleBody">
+            <!-- Populated by JS from content.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <p class="schedule__note reveal" data-i18n="schedule.note">* Programul poate suferi modificări. Contactează-ne pentru detalii.</p>
+    </div>
+  </section>
+
+  <!-- ========== TRAINERS ========== -->
+  <section class="trainers" id="trainers">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__tag" data-i18n="trainers.tag">Echipa</span>
+        <h2 class="section-header__title" data-i18n="trainers.title">Antrenorii Noștri</h2>
+      </div>
+
+      <div class="trainers__grid" id="trainersGrid">
+        <!-- Populated by JS from content.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EVENTS / FIGHT RECORD ========== -->
+  <section class="events" id="events">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__tag" data-i18n="events.tag">Palmares</span>
+        <h2 class="section-header__title" data-i18n="events.title">Flavius Biea — Record Profesionist</h2>
+      </div>
+
+      <!-- Stats counters -->
+      <div class="events__stats reveal">
+        <div class="stat-card">
+          <span class="stat-card__number" data-count="16">0</span>
+          <span class="stat-card__label" data-i18n="events.totalFights">Meciuri Totale</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__number" data-count="14">0</span>
+          <span class="stat-card__label" data-i18n="events.wins">Victorii</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__number" data-count="6">0</span>
+          <span class="stat-card__label" data-i18n="events.knockouts">Knockouturi</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__number" data-count="3">0</span>
+          <span class="stat-card__label" data-i18n="events.titles">Titluri</span>
+        </div>
+      </div>
+
+      <!-- Fight record table -->
+      <div class="events__table-wrap reveal">
+        <table class="events__table" id="fightTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th data-i18n="events.date">Data</th>
+              <th data-i18n="events.opponent">Adversar</th>
+              <th data-i18n="events.record">Record</th>
+              <th data-i18n="events.location">Locație</th>
+              <th data-i18n="events.result">Rezultat</th>
+            </tr>
+          </thead>
+          <tbody id="fightBody">
+            <!-- Populated by JS from content.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__tag" data-i18n="contact.tag">Contact</span>
+        <h2 class="section-header__title" data-i18n="contact.title">Hai la antrenament</h2>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="contact__item">
+            <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <h4 class="contact__item-title" data-i18n="contact.addressLabel">Adresă</h4>
+              <p data-i18n="contact.address">Aleea Viilor Nr. 12A, Etaj 1, Timișoara</p>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <h4 class="contact__item-title" data-i18n="contact.phoneLabel">Telefon</h4>
+              <p><a href="tel:+40741744063" class="contact__link">0741 744 063</a></p>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <h4 class="contact__item-title" data-i18n="contact.emailLabel">Email</h4>
+              <p><a href="mailto:bieapromotion1@gmail.com" class="contact__link">bieapromotion1@gmail.com</a></p>
+            </div>
+          </div>
+
+          <!-- Google Map Embed -->
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.1!2d21.2287!3d45.7489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQWxlZWEgVmlpbG9yIE5yLiAxMkEsIFRpbWnFn29hcmE!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+              width="100%"
+              height="300"
+              style="border:0; border-radius: 12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="contact__form-wrap reveal">
+          <form class="contact__form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="name" data-i18n="contact.nameLabel">Nume</label>
+              <input type="text" id="name" name="name" required data-i18n-attr="placeholder:contact.namePlaceholder" placeholder="Numele tău">
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="contact.emailFormLabel">Email</label>
+              <input type="email" id="email" name="email" required data-i18n-attr="placeholder:contact.emailPlaceholder" placeholder="email@exemplu.com">
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="contact.messageLabel">Mesaj</label>
+              <textarea id="message" name="message" rows="5" required data-i18n-attr="placeholder:contact.messagePlaceholder" placeholder="Scrie mesajul tău aici..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" data-i18n="contact.send">Trimite mesajul</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="footer__logo">BIEA BOXING</span>
+          <p class="footer__tagline" data-i18n="footer.tagline">Pasiune și excelență în boxul profesionist.</p>
+        </div>
+
+        <div class="footer__nav">
+          <h4 class="footer__heading" data-i18n="footer.navTitle">Navigare</h4>
+          <ul>
+            <li><a href="#hero" data-i18n="nav.home">Acasă</a></li>
+            <li><a href="#about" data-i18n="nav.about">Despre Noi</a></li>
+            <li><a href="#schedule" data-i18n="nav.schedule">Program Clase</a></li>
+            <li><a href="#trainers" data-i18n="nav.trainers">Antrenori</a></li>
+            <li><a href="#events" data-i18n="nav.events">Evenimente</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <h4 class="footer__heading" data-i18n="footer.socialTitle">Social Media</h4>
+          <div class="footer__social-links">
+            <a href="https://www.facebook.com/BieaPromotion" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/flaviusbiea" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/FlaviusBiea" target="_blank" rel="noopener" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYear"></span> Biea Boxing. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+  <a href="https://wa.me/40741744063?text=Buna%20ziua%2C%20As%20dori%20mai%20multe%20detalii%20despre%20BieaBoxing%20Gym."
+     class="whatsapp-btn"
+     target="_blank"
+     rel="noopener"
+     aria-label="Contact WhatsApp"
+     data-i18n-attr="aria-label:whatsapp.ariaLabel">
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.742 3.052 9.378L1.056 31.2l6.042-1.94a15.9 15.9 0 0 0 8.906 2.704C24.826 31.964 32 24.788 32 16.004S24.826 0 16.004 0zm9.35 22.614c-.394 1.108-1.946 2.03-3.196 2.296-.856.182-1.974.326-5.736-1.232-4.812-1.994-7.91-6.874-8.148-7.194-.23-.32-1.882-2.506-1.882-4.78s1.19-3.392 1.614-3.858c.394-.434 1.036-.65 1.65-.65.198 0 .376.01.536.018.424.018.636.042.916.712.35.838 1.2 2.924 1.304 3.136.106.212.212.49.07.784-.132.3-.248.432-.46.678-.212.248-.414.436-.626.702-.194.23-.414.476-.172.9.24.424 1.074 1.77 2.306 2.866 1.586 1.412 2.922 1.85 3.336 2.054.318.158.696.132.946-.132.318-.338.712-.9 1.114-1.454.284-.396.644-.446.992-.302.354.136 2.238 1.056 2.622 1.248.384.194.64.288.734.448.094.16.094.924-.3 2.032z"/>
+    </svg>
+    <span class="whatsapp-btn__tooltip" data-i18n="whatsapp.tooltip">Contactează-ne pe WhatsApp</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/content.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
