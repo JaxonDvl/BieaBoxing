@@ -8,8 +8,12 @@
 const Theme = {
   currentTheme: 'classic',
   STORAGE_KEY: 'biea-theme',
+  _initialized: false,
 
   init() {
+    if (this._initialized) return;
+    this._initialized = true;
+
     const saved = localStorage.getItem(this.STORAGE_KEY);
     if (saved === 'classic' || saved === 'electric') {
       this.currentTheme = saved;
@@ -81,3 +85,9 @@ const Theme = {
     }
   },
 };
+
+// Self-initialize on DOMContentLoaded as a safety net
+// (in case App.init() throws before reaching Theme.init())
+document.addEventListener('DOMContentLoaded', () => {
+  Theme.init();
+});

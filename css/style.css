@@ -128,11 +128,10 @@ html.theme-electric .navbar__menu {
 }
 
 html.theme-electric .navbar__link {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   letter-spacing: 0;
   font-family: var(--font-heading);
   font-weight: 400;
-  font-size: 1rem;
 }
 
 html.theme-electric .navbar__link::after {
