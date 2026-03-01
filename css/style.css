@@ -119,6 +119,20 @@ html.theme-electric .navbar--scrolled {
 html.theme-electric .navbar__logo-text {
   text-shadow: 0 0 10px rgba(212, 255, 0, 0.3);
   letter-spacing: 5px;
+  font-size: 1.6rem;
+}
+
+/* Tighter nav links */
+html.theme-electric .navbar__menu {
+  gap: 20px;
+}
+
+html.theme-electric .navbar__link {
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 html.theme-electric .navbar__link::after {
@@ -130,14 +144,38 @@ html.theme-electric .navbar__link:hover {
   text-shadow: 0 0 8px rgba(212, 255, 0, 0.4);
 }
 
-html.theme-electric .lang-toggle,
+/* Compact icon-only theme toggle */
 html.theme-electric .theme-toggle {
   border-radius: 0;
+  padding: 6px 8px;
+  border-color: var(--color-red);
+  gap: 0;
+}
+
+html.theme-electric .theme-toggle__label {
+  display: none;
+}
+
+html.theme-electric .theme-toggle__icon {
+  width: 18px;
+  height: 18px;
 }
 
 html.theme-electric .theme-toggle:hover {
-  border-color: var(--color-red);
-  box-shadow: 0 0 10px rgba(212, 255, 0, 0.2);
+  box-shadow: 0 0 10px rgba(212, 255, 0, 0.3);
+  background-color: rgba(212, 255, 0, 0.1);
+}
+
+/* Compact lang toggle */
+html.theme-electric .lang-toggle {
+  border-radius: 0;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  gap: 4px;
+}
+
+html.theme-electric .navbar__actions {
+  gap: 10px;
 }
 
 /* --- HERO --- */
