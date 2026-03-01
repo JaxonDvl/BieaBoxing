@@ -45,11 +45,13 @@ const Gallery = {
   },
 
   // ========================================
-  // LIGHTBOX (ready for when images are added)
+  // LIGHTBOX — click any item, arrow through
   // ========================================
   setupLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxPlaceholder = document.getElementById('lightboxPlaceholder');
+    const counter = document.getElementById('lightboxCounter');
     const closeBtn = lightbox?.querySelector('.lightbox__close');
     const prevBtn = lightbox?.querySelector('.lightbox__prev');
     const nextBtn = lightbox?.querySelector('.lightbox__next');
@@ -57,15 +59,46 @@ const Gallery = {
     if (!lightbox) return;
 
     let currentIndex = 0;
-    let images = [];
+    let items = [];
+
+    const getVisibleItems = () =>
+      Array.from(document.querySelectorAll('.gallery__item:not(.gallery__item--hidden)'));
+
+    const showItem = (index) => {
+      const item = items[index];
+      if (!item) return;
+
+      const img = item.querySelector('.gallery__thumb img');
+      const isVideo = item.dataset.type === 'videos';
+
+      if (img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || '';
+        lightboxImg.hidden = false;
+        lightboxPlaceholder.hidden = true;
+      } else {
+        lightboxImg.hidden = true;
+        lightboxPlaceholder.hidden = false;
+        // Swap icon for video placeholders
+        const svg = lightboxPlaceholder.querySelector('svg');
+        if (isVideo) {
+          svg.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+          svg.style.color = 'var(--color-red)';
+        } else {
+          svg.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>';
+          svg.style.color = '';
+        }
+      }
+
+      counter.textContent = `${index + 1} / ${items.length}`;
+    };
 
     const open = (index) => {
-      images = Array.from(document.querySelectorAll('.gallery__item[data-type="photos"]:not(.gallery__item--hidden) .gallery__thumb img'));
-      if (images.length === 0) return;
+      items = getVisibleItems();
+      if (items.length === 0) return;
 
       currentIndex = index;
-      lightboxImg.src = images[currentIndex].src;
-      lightboxImg.alt = images[currentIndex].alt || '';
+      showItem(currentIndex);
       lightbox.hidden = false;
       requestAnimationFrame(() => lightbox.classList.add('lightbox--open'));
       document.body.style.overflow = 'hidden';
@@ -76,27 +109,25 @@ const Gallery = {
       setTimeout(() => {
         lightbox.hidden = true;
         lightboxImg.src = '';
+        lightboxImg.hidden = false;
+        lightboxPlaceholder.hidden = true;
       }, 300);
       document.body.style.overflow = '';
     };
 
     const navigate = (dir) => {
-      if (images.length === 0) return;
-      currentIndex = (currentIndex + dir + images.length) % images.length;
-      lightboxImg.src = images[currentIndex].src;
-      lightboxImg.alt = images[currentIndex].alt || '';
+      if (items.length === 0) return;
+      currentIndex = (currentIndex + dir + items.length) % items.length;
+      showItem(currentIndex);
     };
 
-    // Click on gallery images to open lightbox
+    // Click any gallery item to open lightbox
     document.getElementById('galleryGrid')?.addEventListener('click', (e) => {
-      const item = e.target.closest('.gallery__item[data-type="photos"]');
+      const item = e.target.closest('.gallery__item');
       if (!item) return;
 
-      const img = item.querySelector('.gallery__thumb img');
-      if (!img) return; // Don't open for placeholders
-
-      const allImages = Array.from(document.querySelectorAll('.gallery__item[data-type="photos"]:not(.gallery__item--hidden) .gallery__thumb img'));
-      const index = allImages.indexOf(img);
+      const visibleItems = getVisibleItems();
+      const index = visibleItems.indexOf(item);
       if (index >= 0) open(index);
     });
 
@@ -114,8 +145,21 @@ const Gallery = {
 
     // Close on backdrop click
     lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) close();
+      if (e.target === lightbox || e.target === lightbox.querySelector('.lightbox__content')) close();
     });
+
+    // Swipe support for mobile
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        navigate(diff > 0 ? -1 : 1);
+      }
+    }, { passive: true });
   },
 
   // ========================================

@@ -76,7 +76,7 @@
   </header>
 
   <main>
-  <!-- ========== GALLERY HERO ========== -->
+  <!-- ========== GALLERY HEADER ========== -->
   <section class="gallery-hero" aria-label="Galerie foto și video">
     <div class="container">
       <div class="section-header reveal">
@@ -99,86 +99,91 @@
     <div class="container">
       <div class="gallery__grid" id="galleryGrid">
 
-        <!-- Placeholder items — replace src with actual media later -->
-        <div class="gallery__item reveal" data-type="photos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              <span data-i18n="gallery.photoPlaceholder">Foto în curând</span>
+        <!--
+          HOW TO ADD PHOTOS:
+          Replace a placeholder block with:
+          <div class="gallery__item" data-type="photos">
+            <div class="gallery__thumb">
+              <img src="images/gallery/your-photo.jpg" alt="Description" loading="lazy">
             </div>
           </div>
+
+          HOW TO ADD VIDEOS:
+          Replace a placeholder block with:
+          <div class="gallery__item" data-type="videos">
+            <div class="gallery__thumb gallery__thumb--video">
+              <img src="images/gallery/video-thumbnail.jpg" alt="Description" loading="lazy">
+              <div class="gallery__play-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+        -->
+
+        <!-- Row 1: Photos -->
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
+        </div>
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
+        </div>
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
+        </div>
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
         </div>
 
-        <div class="gallery__item reveal" data-type="photos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              <span data-i18n="gallery.photoPlaceholder">Foto în curând</span>
-            </div>
-          </div>
+        <!-- Row 2: Mix -->
+        <div class="gallery__item" data-type="videos">
+          <div class="gallery__thumb"><div class="gallery__placeholder gallery__placeholder--video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div></div>
+        </div>
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
+        </div>
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
+        </div>
+        <div class="gallery__item" data-type="videos">
+          <div class="gallery__thumb"><div class="gallery__placeholder gallery__placeholder--video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div></div>
         </div>
 
-        <div class="gallery__item gallery__item--tall reveal" data-type="photos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              <span data-i18n="gallery.photoPlaceholder">Foto în curând</span>
-            </div>
-          </div>
+        <!-- Row 3: Photos -->
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
         </div>
-
-        <div class="gallery__item reveal" data-type="videos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder gallery__placeholder--video">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span data-i18n="gallery.videoPlaceholder">Video în curând</span>
-            </div>
-          </div>
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
         </div>
-
-        <div class="gallery__item reveal" data-type="photos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              <span data-i18n="gallery.photoPlaceholder">Foto în curând</span>
-            </div>
-          </div>
+        <div class="gallery__item" data-type="photos">
+          <div class="gallery__thumb"><div class="gallery__placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </div></div>
         </div>
-
-        <div class="gallery__item reveal" data-type="videos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder gallery__placeholder--video">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span data-i18n="gallery.videoPlaceholder">Video în curând</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery__item gallery__item--wide reveal" data-type="photos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              <span data-i18n="gallery.photoPlaceholder">Foto în curând</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery__item reveal" data-type="photos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              <span data-i18n="gallery.photoPlaceholder">Foto în curând</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery__item reveal" data-type="videos">
-          <div class="gallery__thumb">
-            <div class="gallery__placeholder gallery__placeholder--video">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span data-i18n="gallery.videoPlaceholder">Video în curând</span>
-            </div>
-          </div>
+        <div class="gallery__item" data-type="videos">
+          <div class="gallery__thumb"><div class="gallery__placeholder gallery__placeholder--video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div></div>
         </div>
 
       </div>
@@ -261,8 +266,14 @@
     <button class="lightbox__close" aria-label="Închide">&times;</button>
     <button class="lightbox__prev" aria-label="Anterior">&#10094;</button>
     <button class="lightbox__next" aria-label="Următor">&#10095;</button>
-    <div class="lightbox__content">
+    <div class="lightbox__counter" id="lightboxCounter"></div>
+    <div class="lightbox__content" id="lightboxContent">
       <img class="lightbox__img" id="lightboxImg" src="" alt="">
+      <!-- Placeholder shown when no real image exists -->
+      <div class="lightbox__placeholder" id="lightboxPlaceholder" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        <span data-i18n="gallery.photoPlaceholder">Foto în curând</span>
+      </div>
     </div>
   </div>
 
