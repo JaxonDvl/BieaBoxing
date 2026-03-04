@@ -53,6 +53,7 @@ const Gallery = {
   setupLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxVideo = document.getElementById('lightboxVideo');
     const lightboxPlaceholder = document.getElementById('lightboxPlaceholder');
     const counter = document.getElementById('lightboxCounter');
     const closeBtn = lightbox?.querySelector('.lightbox__close');
@@ -72,25 +73,24 @@ const Gallery = {
       if (!item) return;
 
       const img = item.querySelector('.gallery__thumb img');
-      const isVideo = item.dataset.type === 'videos';
+      const video = item.querySelector('.gallery__thumb video');
 
-      if (img) {
+      // Stop any playing video
+      lightboxVideo.pause();
+      lightboxVideo.src = '';
+      lightboxVideo.hidden = true;
+      lightboxImg.hidden = true;
+      lightboxPlaceholder.hidden = true;
+
+      if (video) {
+        lightboxVideo.src = video.src;
+        lightboxVideo.hidden = false;
+      } else if (img) {
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt || '';
         lightboxImg.hidden = false;
-        lightboxPlaceholder.hidden = true;
       } else {
-        lightboxImg.hidden = true;
         lightboxPlaceholder.hidden = false;
-        // Swap icon for video placeholders
-        const svg = lightboxPlaceholder.querySelector('svg');
-        if (isVideo) {
-          svg.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
-          svg.style.color = 'var(--color-red)';
-        } else {
-          svg.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>';
-          svg.style.color = '';
-        }
       }
 
       counter.textContent = `${index + 1} / ${items.length}`;
@@ -108,11 +108,14 @@ const Gallery = {
     };
 
     const close = () => {
+      lightboxVideo.pause();
+      lightboxVideo.src = '';
       lightbox.classList.remove('lightbox--open');
       setTimeout(() => {
         lightbox.hidden = true;
         lightboxImg.src = '';
         lightboxImg.hidden = false;
+        lightboxVideo.hidden = true;
         lightboxPlaceholder.hidden = true;
       }, 300);
       document.body.style.overflow = '';

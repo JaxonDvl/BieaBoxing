@@ -148,21 +148,39 @@ const siteContent = {
     list: [
       {
         name: "Flavius Biea",
-        specialty: { ro: "Box Profesionist",          en: "Professional Boxing" },
-        bio:       { ro: "Campion național de box profesionist și fondatorul Biea Boxing. Experiență de peste 15 ani în ring.", en: "National professional boxing champion and founder of Biea Boxing. Over 15 years of ring experience." },
-        image: "images/trainers/flavius-biea.jpg",
+        specialty: { ro: "Antrenor Box — Licențiat", en: "Licensed Boxing Coach" },
+        bio: {
+          ro: "Antrenamente cu clasa, grup restrâns și private. Box Amator: 316 meciuri (298V / 18Î), 8× Campion Național, 3× Campion European, 1× Campion Mondial, 2× Vice-campion Mondial. Box Profesionist: 24V / 2Î — 1× Campion WBA Continental, 2× WBC Continental, 4× IBA Intercontinental, 1× Campion Mondial IBA.",
+          en: "Group, small-group and private sessions. Amateur Boxing: 316 bouts (298W / 18L), 8× National Champion, 3× European Champion, 1× World Champion, 2× World Runner-up. Pro Boxing: 24W / 2L — 1× WBA Continental, 2× WBC Continental, 4× IBA Intercontinental, 1× IBA World Champion.",
+        },
+        image: "images/trainers/flavius-biea.jpeg",
       },
       {
-        name: "Trainer 2",
-        specialty: { ro: "Kickboxing / MMA",          en: "Kickboxing / MMA" },
-        bio:       { ro: "Descriere antrenor. Editează acest text în content.js.", en: "Trainer description. Edit this text in content.js." },
-        image: "",  // Lasă gol pentru placeholder / Leave empty for placeholder
+        name: "Claudiu Ienci",
+        specialty: { ro: "Antrenor Box", en: "Boxing Coach" },
+        bio: {
+          ro: "Antrenor Box cu 4 ani experiență. Antrenamente cu clasa și private. Box Amator: 8 ani experiență, 2× Vicecampion Național, multiplu medaliat la turnee naționale și internaționale. Box Profesionist: 5 victorii (4 KO) și 1 înfrângere.",
+          en: "Boxing Coach with 4 years of coaching experience. Group and private sessions. Amateur Boxing: 8 years experience, 2× National Runner-up, multiple medals at national and international tournaments. Pro Boxing: 5 wins (4 KO) and 1 loss.",
+        },
+        image: "images/trainers/claudiu-ienci.jpeg",
       },
       {
-        name: "Trainer 3",
-        specialty: { ro: "Box Copii",                  en: "Kids Boxing" },
-        bio:       { ro: "Descriere antrenor. Editează acest text în content.js.", en: "Trainer description. Edit this text in content.js." },
-        image: "",
+        name: "Flavius Andrei",
+        specialty: { ro: "Antrenor MMA & Self Defense", en: "MMA & Self-Defense Coach" },
+        bio: {
+          ro: "Antrenamente cu grupul și private. 3× Campion Național la lupte libere, 6× Vicecampion Național lupte libere, 2014–2019 component al lotului național de lupte libere, 2020 luptător profesionist MMA.",
+          en: "Group and private sessions. 3× National Freestyle Wrestling Champion, 6× National Runner-up, 2014–2019 member of the national wrestling team, 2020 professional MMA fighter.",
+        },
+        image: "images/trainers/flavius-andrei.jpeg",
+      },
+      {
+        name: "Mariana Condescu",
+        specialty: { ro: "Instructor Box & Kickbox", en: "Boxing & Kickboxing Instructor" },
+        bio: {
+          ro: "Instructor Box și Kickbox cu 4 ani experiență. Antrenamente cu clasa și private. 10 ani Karate Wu-Thao (Centură Verde), 2 ani Karate Shotokan, 7 ani Kickbox — multiplă medaliată la competiții naționale (3 medalii Locul 1), 4 ani Box.",
+          en: "Boxing & Kickboxing Instructor with 4 years of coaching experience. Group and private sessions. 10 years Karate Wu-Thao (Green Belt), 2 years Karate Shotokan, 7 years Kickboxing — multiple national medals (3× 1st place), 4 years Boxing.",
+        },
+        image: "images/trainers/mariana-condescu.jpeg",
       },
     ],
   },
@@ -240,7 +258,8 @@ const siteContent = {
     title:            { ro: "Foto & Video",              en: "Photos & Videos" },
     subtitle:         { ro: "Momente din antrenamente, meciuri și gale de box", en: "Moments from training, fights and boxing galas" },
     filterAll:        { ro: "Toate",                     en: "All" },
-    filterPhotos:     { ro: "Foto",                      en: "Photos" },
+    filterPhotos:     { ro: "Ring / Gym",                en: "Ring / Gym" },
+    filterFights:     { ro: "Meciuri",                   en: "Fights" },
     filterVideos:     { ro: "Video",                     en: "Videos" },
     photoPlaceholder: { ro: "Foto în curând",            en: "Photo coming soon" },
     videoPlaceholder: { ro: "Video în curând",           en: "Video coming soon" },

@@ -1100,6 +1100,19 @@ button {
   padding: var(--section-padding);
 }
 
+.trainers__group-photo {
+  margin-bottom: 48px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.trainers__group-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .trainers__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1121,7 +1134,7 @@ button {
 .trainer-card__img-wrap {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   background-color: var(--color-surface-hover);
 }
 
@@ -1599,7 +1612,7 @@ button {
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: 3px;
 }
 
 .gallery__item {
@@ -1619,6 +1632,20 @@ button {
 
 .gallery__item--hidden {
   display: none;
+}
+
+.gallery__item--wide {
+  grid-column: span 2;
+}
+
+.gallery__item--tall {
+  grid-row: span 2;
+  aspect-ratio: unset;
+}
+
+.gallery__item--wide.gallery__item--tall {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .gallery__thumb {
@@ -1781,6 +1808,10 @@ button {
   max-height: 85vh;
   object-fit: contain;
   border-radius: var(--border-radius-sm);
+}
+
+.lightbox__placeholder[hidden] {
+  display: none !important;
 }
 
 .lightbox__placeholder {
