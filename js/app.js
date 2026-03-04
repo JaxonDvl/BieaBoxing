@@ -256,6 +256,36 @@ const App = {
         ${items}
       </div>`;
     }).join('');
+
+    this._renderMobileSchedule(classes, days);
+  },
+
+  _renderMobileSchedule(classes, days) {
+    const view = document.getElementById('scheduleDayView');
+    if (!view) return;
+
+    view.innerHTML = days.map((day) => {
+      const dayClasses = classes.filter((row) => row[day] && row[day].type);
+      if (dayClasses.length === 0) return '';
+
+      const items = dayClasses.map((row) => {
+        const cell = row[day];
+        const name = I18n.t(cell.name);
+        const timeRange = row.endTime
+          ? `${this.formatTime(row.time)} – ${this.formatTime(row.endTime)}`
+          : this.formatTime(row.time);
+        return `<div class="schedule__list-item schedule__cell--${cell.type}">
+          <span class="schedule__list-time">${timeRange}</span>
+          <span class="schedule__list-name">${name}</span>
+        </div>`;
+      }).join('');
+
+      const dayLabel = I18n.t(siteContent.schedule[day]);
+      return `<div class="schedule__list-day">
+        <p class="schedule__list-day-name">${dayLabel}</p>
+        ${items}
+      </div>`;
+    }).join('');
   },
 
   // ========================================
