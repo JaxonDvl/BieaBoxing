@@ -80,6 +80,7 @@ const siteContent = {
     thu:   { ro: "Joi",      en: "Thursday" },
     fri:   { ro: "Vineri",   en: "Friday" },
     sat:   { ro: "Sâmbătă",  en: "Saturday" },
+    sun:   { ro: "Duminică", en: "Sunday" },
 
     // -------------------------------------------------------
     // TIMETABLE DATA
@@ -89,51 +90,76 @@ const siteContent = {
     // -------------------------------------------------------
     classes: [
       {
-        time: "10:00",
-        mon: { type: "boxing",     name: { ro: "Box — Începători",   en: "Boxing — Beginners" } },
-        tue: { type: "",           name: { ro: "",                    en: "" } },
-        wed: { type: "boxing",     name: { ro: "Box — Începători",   en: "Boxing — Beginners" } },
-        thu: { type: "",           name: { ro: "",                    en: "" } },
-        fri: { type: "boxing",     name: { ro: "Box — Începători",   en: "Boxing — Beginners" } },
-        sat: { type: "boxing",     name: { ro: "Box — Toate Nivelurile", en: "Boxing — All Levels" } },
+        time: "13:00", endTime: "14:30",
+        mon: { type: "",           name: { ro: "", en: "" } },
+        tue: { type: "",           name: { ro: "", en: "" } },
+        wed: { type: "",           name: { ro: "", en: "" } },
+        thu: { type: "",           name: { ro: "", en: "" } },
+        fri: { type: "",           name: { ro: "", en: "" } },
+        sat: { type: "boxing",     name: { ro: "Grupa 5",            en: "Group 5" } },
+        sun: { type: "",           name: { ro: "", en: "" } },
       },
       {
-        time: "16:00",
-        mon: { type: "kids",       name: { ro: "Box Copii",          en: "Kids Boxing" } },
-        tue: { type: "kids",       name: { ro: "Box Copii",          en: "Kids Boxing" } },
-        wed: { type: "kids",       name: { ro: "Box Copii",          en: "Kids Boxing" } },
-        thu: { type: "kids",       name: { ro: "Box Copii",          en: "Kids Boxing" } },
-        fri: { type: "",           name: { ro: "",                    en: "" } },
-        sat: { type: "",           name: { ro: "",                    en: "" } },
+        time: "15:00", endTime: "16:00",
+        mon: { type: "",           name: { ro: "", en: "" } },
+        tue: { type: "",           name: { ro: "", en: "" } },
+        wed: { type: "",           name: { ro: "", en: "" } },
+        thu: { type: "",           name: { ro: "", en: "" } },
+        fri: { type: "",           name: { ro: "", en: "" } },
+        sat: { type: "",           name: { ro: "", en: "" } },
+        sun: { type: "kids",       name: { ro: "Copii (4-12 ani)",   en: "Kids (4-12 yrs)" } },
       },
       {
-        time: "17:30",
-        mon: { type: "kickboxing", name: { ro: "Kickboxing",         en: "Kickboxing" } },
-        tue: { type: "mma",        name: { ro: "MMA",                en: "MMA" } },
-        wed: { type: "kickboxing", name: { ro: "Kickboxing",         en: "Kickboxing" } },
-        thu: { type: "mma",        name: { ro: "MMA",                en: "MMA" } },
-        fri: { type: "kickboxing", name: { ro: "Kickboxing",         en: "Kickboxing" } },
-        sat: { type: "",           name: { ro: "",                    en: "" } },
+        time: "17:30", endTime: "18:30",
+        mon: { type: "",           name: { ro: "", en: "" } },
+        tue: { type: "kids",       name: { ro: "Copii (4-12 ani)",   en: "Kids (4-12 yrs)" } },
+        wed: { type: "",           name: { ro: "", en: "" } },
+        thu: { type: "kids",       name: { ro: "Copii (4-12 ani)",   en: "Kids (4-12 yrs)" } },
+        fri: { type: "",           name: { ro: "", en: "" } },
+        sat: { type: "",           name: { ro: "", en: "" } },
+        sun: { type: "",           name: { ro: "", en: "" } },
       },
       {
-        time: "19:00",
-        mon: { type: "boxing",     name: { ro: "Box — Avansați",     en: "Boxing — Advanced" } },
-        tue: { type: "boxing",     name: { ro: "Box — Intermediari", en: "Boxing — Intermediate" } },
-        wed: { type: "boxing",     name: { ro: "Box — Avansați",     en: "Boxing — Advanced" } },
-        thu: { type: "boxing",     name: { ro: "Box — Intermediari", en: "Boxing — Intermediate" } },
-        fri: { type: "selfdefense", name: { ro: "Autoapărare",       en: "Self-Defense" } },
-        sat: { type: "",           name: { ro: "",                    en: "" } },
+        time: "18:00", endTime: "19:30",
+        mon: { type: "boxing",     name: { ro: "Grupa A",            en: "Group A" } },
+        tue: { type: "",           name: { ro: "", en: "" } },
+        wed: { type: "boxing",     name: { ro: "Grupa A",            en: "Group A" } },
+        thu: { type: "",           name: { ro: "", en: "" } },
+        fri: { type: "boxing",     name: { ro: "Grupa A",            en: "Group A" } },
+        sat: { type: "boxing",     name: { ro: "Grupa B",            en: "Group B" } },
+        sun: { type: "",           name: { ro: "", en: "" } },
       },
       {
-        time: "20:30",
-        mon: { type: "boxing",     name: { ro: "Sparring",           en: "Sparring" } },
-        tue: { type: "",           name: { ro: "",                    en: "" } },
-        wed: { type: "boxing",     name: { ro: "Sparring",           en: "Sparring" } },
-        thu: { type: "",           name: { ro: "",                    en: "" } },
-        fri: { type: "",           name: { ro: "",                    en: "" } },
-        sat: { type: "",           name: { ro: "",                    en: "" } },
+        time: "18:30", endTime: "20:00",
+        mon: { type: "",           name: { ro: "", en: "" } },
+        tue: { type: "boxing",     name: { ro: "Grupa 5",            en: "Group 5" } },
+        wed: { type: "",           name: { ro: "", en: "" } },
+        thu: { type: "boxing",     name: { ro: "Grupa 5",            en: "Group 5" } },
+        fri: { type: "",           name: { ro: "", en: "" } },
+        sat: { type: "",           name: { ro: "", en: "" } },
+        sun: { type: "",           name: { ro: "", en: "" } },
+      },
+      {
+        time: "20:00", endTime: "21:30",
+        mon: { type: "kickboxing", name: { ro: "Kickbox",            en: "Kickboxing" } },
+        tue: { type: "boxing",     name: { ro: "Grupa B",            en: "Group B" } },
+        wed: { type: "kickboxing", name: { ro: "Kickbox",            en: "Kickboxing" } },
+        thu: { type: "boxing",     name: { ro: "Grupa B",            en: "Group B" } },
+        fri: { type: "kickboxing", name: { ro: "Kickbox",            en: "Kickboxing" } },
+        sat: { type: "",           name: { ro: "", en: "" } },
+        sun: { type: "",           name: { ro: "", en: "" } },
       },
     ],
+  },
+
+  // ============================
+  // PRIVATE CLASSES
+  // ============================
+  private: {
+    tag:   { ro: "One-to-One",                              en: "One-to-One" },
+    title: { ro: "Clase Private",                           en: "Private Classes" },
+    desc:  { ro: "Contactați-ne pentru clase private",      en: "Contact us for private classes" },
+    cta:   { ro: "Programează o Ședință",                   en: "Book an Appointment" },
   },
 
   // ============================
@@ -219,6 +245,19 @@ const siteContent = {
       { date: "2017-11-11", opponent: "Opponent 2",  record: "5-4-0",  location: "Timișoara, Romania",  result: "W", method: "WTKO" },
       { date: "2017-06-03", opponent: "Opponent 1",  record: "2-0-0",  location: "Timișoara, Romania",  result: "W", method: "WTKO" },
     ],
+  },
+
+  // ============================
+  // OPENING HOURS
+  // ============================
+  hours: {
+    label:       { ro: "Program",          en: "Hours" },
+    monFri:      { ro: "Luni – Vineri",    en: "Mon – Fri" },
+    monFriTime:  { ro: "07:00 – 22:00",    en: "7 am – 10 pm" },
+    sat:         { ro: "Sâmbătă",          en: "Saturday" },
+    satTime:     { ro: "08:00 – 16:00",    en: "8 am – 4 pm" },
+    sun:         { ro: "Duminică",         en: "Sunday" },
+    sunTime:     { ro: "Închis",           en: "Closed" },
   },
 
   // ============================

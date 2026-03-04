@@ -100,14 +100,14 @@
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "10:00",
-        "closes": "21:30"
+        "opens": "07:00",
+        "closes": "22:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
-        "opens": "10:00",
-        "closes": "12:00"
+        "opens": "08:00",
+        "closes": "16:00"
       }
     ],
     "founder": {
@@ -375,7 +375,8 @@
         <h2 class="section-header__title" data-i18n="schedule.title">Program Clase</h2>
       </div>
 
-      <div class="schedule__table-wrap reveal">
+      <div class="schedule__table-outer reveal">
+        <div class="schedule__table-wrap">
         <table class="schedule__table" id="scheduleTable">
           <thead>
             <tr>
@@ -386,15 +387,31 @@
               <th data-i18n="schedule.thu">Joi</th>
               <th data-i18n="schedule.fri">Vineri</th>
               <th data-i18n="schedule.sat">Sâmbătă</th>
+              <th data-i18n="schedule.sun">Duminică</th>
             </tr>
           </thead>
           <tbody id="scheduleBody">
             <!-- Populated by JS from content.js -->
           </tbody>
         </table>
+        </div>
+        <p class="schedule__scroll-hint">← scroll →</p>
       </div>
 
       <p class="schedule__note reveal" data-i18n="schedule.note">* Programul poate suferi modificări. Contactează-ne pentru detalii.</p>
+    </div>
+  </section>
+
+  <!-- ========== PRIVATE CLASSES ========== -->
+  <section class="private" id="private">
+    <div class="private__inner">
+      <div class="private__content reveal">
+        <span class="private__tag" data-i18n="private.tag">One-to-One</span>
+        <h2 class="private__title" data-i18n="private.title">Clase Private</h2>
+        <p class="private__desc" data-i18n="private.desc">Contactați-ne pentru clase private</p>
+        <a href="tel:+40741744063" class="private__phone">0741 744 063</a>
+        <a href="https://wa.me/40741744063?text=Buna%20ziua%2C%20As%20dori%20sa%20programez%20o%20clasa%20privata." class="btn btn--primary private__btn" target="_blank" rel="noopener" data-i18n="private.cta">Programează o Ședință</a>
+      </div>
     </div>
   </section>
 
@@ -422,6 +439,11 @@
       <div class="section-header reveal">
         <span class="section-header__tag" data-i18n="events.tag">Palmares</span>
         <h2 class="section-header__title" data-i18n="events.title">Flavius Biea — Record Profesionist</h2>
+      </div>
+
+      <!-- Flavius photo -->
+      <div class="events__hero-photo reveal">
+        <img src="images/flavius/flavius.jpg" alt="Flavius Biea — Campion Național de Box" loading="lazy">
       </div>
 
       <!-- Stats counters -->
@@ -492,6 +514,16 @@
           </div>
 
           <div class="contact__item">
+            <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <h3 class="contact__item-title" data-i18n="hours.label">Program</h3>
+              <p><span data-i18n="hours.monFri">Luni – Vineri</span>: <span data-i18n="hours.monFriTime">07:00 – 22:00</span></p>
+              <p><span data-i18n="hours.sat">Sâmbătă</span>: <span data-i18n="hours.satTime">08:00 – 16:00</span></p>
+              <p><span data-i18n="hours.sun">Duminică</span>: <span data-i18n="hours.sunTime">Închis</span></p>
+            </div>
+          </div>
+
+          <div class="contact__item">
             <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <div>
               <h3 class="contact__item-title" data-i18n="contact.emailLabel">Email</h4>
@@ -503,7 +535,7 @@
           <div class="contact__map">
             <iframe
               title="Locația Biea Boxing Gym pe Google Maps — Aleea Viilor 12A, Timișoara"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.1!2d21.2287!3d45.7489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQWxlZWEgVmlpbG9yIE5yLiAxMkEsIFRpbWnFn29hcmE!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
+              src="https://maps.google.com/maps?q=Aleea+Viilor+Nr+12A,+Timisoara,+Romania&output=embed&z=17"
               width="100%"
               height="300"
               style="border:0; border-radius: 12px;"

@@ -178,21 +178,32 @@ const App = {
   // ========================================
   // RENDER SCHEDULE TABLE
   // ========================================
+  formatTime(time24) {
+    const [h, m] = time24.split(':').map(Number);
+    const period = h >= 12 ? 'pm' : 'am';
+    const h12 = h % 12 || 12;
+    return `${h12}:${m.toString().padStart(2, '0')} ${period}`;
+  },
+
   renderSchedule() {
     const tbody = document.getElementById('scheduleBody');
     if (!tbody) return;
 
     const classes = siteContent.schedule.classes;
-    const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
     tbody.innerHTML = classes.map((row) => {
+      const timeRange = row.endTime
+        ? `${this.formatTime(row.time)} - ${this.formatTime(row.endTime)}`
+        : this.formatTime(row.time);
+
       const cells = days.map((day) => {
         const cell = row[day];
         if (!cell || !cell.type) {
           return '<td></td>';
         }
         const name = I18n.t(cell.name);
-        return `<td><div class="schedule__cell schedule__cell--${cell.type}">${name}</div></td>`;
+        return `<td><div class="schedule__cell schedule__cell--${cell.type}"><span class="schedule__cell-name">${name}</span><span class="schedule__cell-time">${timeRange}</span></div></td>`;
       }).join('');
 
       return `<tr><td><strong>${row.time}</strong></td>${cells}</tr>`;
