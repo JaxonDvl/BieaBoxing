@@ -301,7 +301,6 @@ const siteContent = {
     filterVideos:     { ro: "Video",                     en: "Videos" },
     photoPlaceholder: { ro: "Foto în curând",            en: "Photo coming soon" },
     videoPlaceholder: { ro: "Video în curând",           en: "Video coming soon" },
-    comingSoon:       { ro: "Conținut nou va fi adăugat în curând. Urmărește-ne pe social media!", en: "New content will be added soon. Follow us on social media!" },
   },
 
   // ============================
