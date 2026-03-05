@@ -19,9 +19,6 @@ const App = {
     this.setupSmoothScroll();
     this.setCurrentYear();
 
-    // Initialize theme before i18n
-    Theme.init();
-
     // Initialize i18n last (after DOM is populated)
     I18n.init();
   },
