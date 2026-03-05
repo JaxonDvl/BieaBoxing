@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta -->
+  <title>Program Clase | Biea Boxing Gym Timișoara</title>
+  <meta name="description" content="Program clase Biea Boxing Gym Timișoara — box, kickboxing și box copii. Vezi orarul săptămânal și găsește antrenamentul potrivit pentru tine.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bieaboxing.ro/schedule.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Biea Boxing Gym">
+  <meta property="og:title" content="Program Clase | Biea Boxing Gym Timișoara">
+  <meta property="og:description" content="Orar săptămânal box, kickboxing și box copii la Biea Boxing Gym Timișoara.">
+  <meta property="og:url" content="https://bieaboxing.ro/schedule.html">
+  <meta property="og:image" content="https://bieaboxing.ro/images/og-cover.jpg">
+
+  <!-- Theme & Favicon -->
+  <meta name="theme-color" content="#DC2626">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥊</text></svg>">
+
+  <!-- Google Fonts — non-render-blocking async load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Teko:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('biea-theme');
+      if (t === 'electric') document.documentElement.classList.add('theme-electric');
+    })();
+  </script>
+</head>
+<body>
+
+  <noscript>
+    <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
+
+  <header>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar--scrolled" id="navbar" aria-label="Navigare principală">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <span class="navbar__logo-text">BIEA BOXING</span>
+      </a>
+
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="index.html" class="navbar__link" data-i18n="nav.home">Acasă</a></li>
+        <li><a href="index.html#about" class="navbar__link" data-i18n="nav.about">Despre Noi</a></li>
+        <li><a href="schedule.html" class="navbar__link navbar__link--active" data-i18n="nav.schedule">Program Clase</a></li>
+        <li><a href="index.html#trainers" class="navbar__link" data-i18n="nav.trainers">Antrenori</a></li>
+        <li><a href="index.html#events" class="navbar__link" data-i18n="nav.events">Evenimente</a></li>
+        <li><a href="gallery.html" class="navbar__link" data-i18n="nav.gallery">Galerie</a></li>
+        <li><a href="index.html#contact" class="navbar__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-toggle__option lang-toggle__option--active" data-lang="ro">RO</span>
+          <span class="lang-toggle__divider">|</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+
+        <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <main>
+  <!-- ========== SCHEDULE ========== -->
+  <section class="schedule" id="schedule" style="padding-top: calc(var(--navbar-height, 72px) + 40px);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__tag" data-i18n="schedule.tag">Program</span>
+        <h2 class="section-header__title" data-i18n="schedule.title">Program Clase</h2>
+      </div>
+
+      <div class="schedule__legend reveal">
+        <span class="schedule__legend-item schedule__cell--boxing-a" data-i18n="schedule.groupA">Grupa A</span>
+        <span class="schedule__legend-item schedule__cell--boxing-b" data-i18n="schedule.groupB">Grupa B</span>
+        <span class="schedule__legend-item schedule__cell--boxing-5" data-i18n="schedule.group5">Grupa 5</span>
+        <span class="schedule__legend-item schedule__cell--kickboxing" data-i18n="services.kickboxing.name">Kickbox</span>
+        <span class="schedule__legend-item schedule__cell--kids" data-i18n="services.kids.name">Copii</span>
+      </div>
+
+      <div class="schedule__table-outer reveal">
+        <div class="schedule__table-wrap">
+        <table class="schedule__table" id="scheduleTable">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="schedule.time">Ora</th>
+              <th scope="col" data-i18n="schedule.mon">Luni</th>
+              <th scope="col" data-i18n="schedule.tue">Marți</th>
+              <th scope="col" data-i18n="schedule.wed">Miercuri</th>
+              <th scope="col" data-i18n="schedule.thu">Joi</th>
+              <th scope="col" data-i18n="schedule.fri">Vineri</th>
+              <th scope="col" data-i18n="schedule.sat">Sâmbătă</th>
+              <th scope="col" data-i18n="schedule.sun">Duminică</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleBody">
+            <!-- Populated by JS from content.js -->
+          </tbody>
+        </table>
+        </div>
+        <p class="schedule__scroll-hint">← scroll →</p>
+        <div class="schedule__day-view" id="scheduleDayView"></div>
+      </div>
+
+      <p class="schedule__note reveal" data-i18n="schedule.note">* Programul poate suferi modificări. Contactează-ne pentru detalii.</p>
+    </div>
+  </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="footer__logo">BIEA BOXING</span>
+          <p class="footer__tagline" data-i18n="footer.tagline">Sala de box profesionistă din Timișoara — Box, Kickboxing, MMA.</p>
+        </div>
+
+        <div class="footer__nav">
+          <h3 class="footer__heading" data-i18n="footer.navTitle">Navigare</h3>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Acasă</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">Despre Noi</a></li>
+            <li><a href="schedule.html" data-i18n="nav.schedule">Program Clase</a></li>
+            <li><a href="index.html#trainers" data-i18n="nav.trainers">Antrenori</a></li>
+            <li><a href="index.html#events" data-i18n="nav.events">Evenimente</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+            <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <h3 class="footer__heading" data-i18n="footer.socialTitle">Social Media</h3>
+          <div class="footer__social-links">
+            <a href="https://www.facebook.com/BieaPromotion" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/flaviusbiea" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/FlaviusBiea" target="_blank" rel="noopener" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYear"></span> Biea Boxing. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+  <a href="https://wa.me/40741744063?text=Buna%20ziua%2C%20As%20dori%20mai%20multe%20detalii%20despre%20BieaBoxing%20Gym."
+     class="whatsapp-btn"
+     target="_blank"
+     rel="noopener"
+     aria-label="Contact WhatsApp"
+     data-i18n-attr="aria-label:whatsapp.ariaLabel">
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.742 3.052 9.378L1.056 31.2l6.042-1.94a15.9 15.9 0 0 0 8.906 2.704C24.826 31.964 32 24.788 32 16.004S24.826 0 16.004 0zm9.35 22.614c-.394 1.108-1.946 2.03-3.196 2.296-.856.182-1.974.326-5.736-1.232-4.812-1.994-7.91-6.874-8.148-7.194-.23-.32-1.882-2.506-1.882-4.78s1.19-3.392 1.614-3.858c.394-.434 1.036-.65 1.65-.65.198 0 .376.01.536.018.424.018.636.042.916.712.35.838 1.2 2.924 1.304 3.136.106.212.212.49.07.784-.132.3-.248.432-.46.678-.212.248-.414.436-.626.702-.194.23-.414.476-.172.9.24.424 1.074 1.77 2.306 2.866 1.586 1.412 2.922 1.85 3.336 2.054.318.158.696.132.946-.132.318-.338.712-.9 1.114-1.454.284-.396.644-.446.992-.302.354.136 2.238 1.056 2.622 1.248.384.194.64.288.734.448.094.16.094.924-.3 2.032z"/>
+    </svg>
+    <span class="whatsapp-btn__tooltip" data-i18n="whatsapp.tooltip">Contactează-ne pe WhatsApp</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/content.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

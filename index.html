@@ -194,7 +194,7 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://bieaboxing.ro/" },
       { "@type": "ListItem", "position": 2, "name": "Despre Noi", "item": "https://bieaboxing.ro/#about" },
-      { "@type": "ListItem", "position": 3, "name": "Program Clase", "item": "https://bieaboxing.ro/#schedule" },
+      { "@type": "ListItem", "position": 3, "name": "Program Clase", "item": "https://bieaboxing.ro/schedule.html" },
       { "@type": "ListItem", "position": 4, "name": "Antrenori", "item": "https://bieaboxing.ro/#trainers" },
       { "@type": "ListItem", "position": 5, "name": "Evenimente", "item": "https://bieaboxing.ro/#events" },
       { "@type": "ListItem", "position": 6, "name": "Contact", "item": "https://bieaboxing.ro/#contact" }
@@ -242,7 +242,7 @@
       <ul class="navbar__menu" id="navMenu">
         <li><a href="#hero" class="navbar__link" data-i18n="nav.home">Acasă</a></li>
         <li><a href="#about" class="navbar__link" data-i18n="nav.about">Despre Noi</a></li>
-        <li><a href="#schedule" class="navbar__link" data-i18n="nav.schedule">Program Clase</a></li>
+        <li><a href="schedule.html" class="navbar__link" data-i18n="nav.schedule">Program Clase</a></li>
         <li><a href="#trainers" class="navbar__link" data-i18n="nav.trainers">Antrenori</a></li>
         <li><a href="#events" class="navbar__link" data-i18n="nav.events">Evenimente</a></li>
         <li><a href="gallery.html" class="navbar__link" data-i18n="nav.gallery">Galerie</a></li>
@@ -356,48 +356,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ========== SCHEDULE ========== -->
-  <section class="schedule" id="schedule">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-header__tag" data-i18n="schedule.tag">Program</span>
-        <h2 class="section-header__title" data-i18n="schedule.title">Program Clase</h2>
-      </div>
-
-      <div class="schedule__legend reveal">
-        <span class="schedule__legend-item schedule__cell--boxing" data-i18n="services.boxing.name">Box</span>
-        <span class="schedule__legend-item schedule__cell--kickboxing" data-i18n="services.kickboxing.name">Kickbox</span>
-        <span class="schedule__legend-item schedule__cell--kids" data-i18n="services.kids.name">Copii</span>
-      </div>
-
-      <div class="schedule__table-outer reveal">
-        <div class="schedule__table-wrap">
-        <table class="schedule__table" id="scheduleTable">
-          <thead>
-            <tr>
-              <th scope="col" data-i18n="schedule.time">Ora</th>
-              <th scope="col" data-i18n="schedule.mon">Luni</th>
-              <th scope="col" data-i18n="schedule.tue">Marți</th>
-              <th scope="col" data-i18n="schedule.wed">Miercuri</th>
-              <th scope="col" data-i18n="schedule.thu">Joi</th>
-              <th scope="col" data-i18n="schedule.fri">Vineri</th>
-              <th scope="col" data-i18n="schedule.sat">Sâmbătă</th>
-              <th scope="col" data-i18n="schedule.sun">Duminică</th>
-            </tr>
-          </thead>
-          <tbody id="scheduleBody">
-            <!-- Populated by JS from content.js -->
-          </tbody>
-        </table>
-        </div>
-        <p class="schedule__scroll-hint">← scroll →</p>
-        <div class="schedule__day-view" id="scheduleDayView"></div>
-      </div>
-
-      <p class="schedule__note reveal" data-i18n="schedule.note">* Programul poate suferi modificări. Contactează-ne pentru detalii.</p>
     </div>
   </section>
 
@@ -586,7 +544,7 @@
           <ul>
             <li><a href="#hero" data-i18n="nav.home">Acasă</a></li>
             <li><a href="#about" data-i18n="nav.about">Despre Noi</a></li>
-            <li><a href="#schedule" data-i18n="nav.schedule">Program Clase</a></li>
+            <li><a href="schedule.html" data-i18n="nav.schedule">Program Clase</a></li>
             <li><a href="#trainers" data-i18n="nav.trainers">Antrenori</a></li>
             <li><a href="#events" data-i18n="nav.events">Evenimente</a></li>
             <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
