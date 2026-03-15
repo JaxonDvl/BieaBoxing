@@ -74,49 +74,42 @@ BieaBoxing/
 
 ## Running the site locally
 
-Since this is a plain HTML site, you can preview it without installing anything:
-
-**Option A — Open directly in a browser:**
-Double-click `index.html`. Most things will work, but some browsers block local files from loading scripts. If the page looks broken, use Option B.
-
-**Option B — Use a simple local server (recommended):**
-
-With Python (comes pre-installed on Mac/Linux):
 ```bash
-python3 -m http.server 8080
+bash scripts/start.sh
 ```
-Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
-With Node.js:
-```bash
-npx serve .
-```
-Then open the URL shown in the terminal.
+Opens a local server at [http://localhost:8080](http://localhost:8080). Press `Ctrl+C` to stop.
 
-To stop the server press `Ctrl+C` in the terminal.
+Requires Python 3 (pre-installed on Mac/Linux).
 
 ## Building
 
-There is no build step — the site is already static HTML/CSS/JS and ready to deploy as-is.
+```bash
+bash scripts/build.sh
+```
+
+Minifies JS and CSS, then outputs everything to the `dist/` folder, ready for deployment.
+
+Requires Node.js for the first run (downloads `terser` and `clean-css-cli` automatically via `npx`).
 
 ## Deploying
 
-To publish the site, upload all project files to your web hosting via FTP:
+The deploy script builds the project and uploads `dist/` to your server via FTP.
 
-1. Connect to your hosting using an FTP client (e.g. [FileZilla](https://filezilla-project.org), free)
-2. Navigate to the public directory (usually `public_html` or `www`)
-3. Upload everything **except**: `README.md`, `CLAUDE.md`, and the Lighthouse report files (`*.report.html`, `*.report.json`)
-4. Your site will be live immediately — no restart needed
+**First-time setup:**
+1. Install `lftp`: `brew install lftp`
+2. Copy `.env.example` to `.env` and fill in your FTP credentials:
+```
+FTP_HOST=your-host.com
+FTP_USER=your-username
+FTP_PASS=your-password
+FTP_DIR=/public_html
+```
 
-Files to upload:
+**Deploy:**
+```bash
+bash scripts/deploy.sh
 ```
-index.html
-gallery.html
-schedule.html
-robots.txt
-sitemap.xml
-css/
-js/
-images/
-```
+
+The `.env` file is git-ignored — never commit it.
 
