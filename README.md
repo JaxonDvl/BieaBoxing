@@ -72,8 +72,51 @@ BieaBoxing/
 2. Use the filename (no spaces, use hyphens) e.g. `flavius-biea.jpg`
 3. Update the path in `content.js`, e.g. `image: "images/trainers/flavius-biea.jpg"`
 
-## Contact form
+## Running the site locally
 
-The contact form sends messages via WhatsApp. If you want to receive messages by email:
-1. Create a free account on [Formspree](https://formspree.io)
-2. Replace `YOUR_FORM_ID` in `index.html` with your Formspree ID
+Since this is a plain HTML site, you can preview it without installing anything:
+
+**Option A — Open directly in a browser:**
+Double-click `index.html`. Most things will work, but some browsers block local files from loading scripts. If the page looks broken, use Option B.
+
+**Option B — Use a simple local server (recommended):**
+
+With Python (comes pre-installed on Mac/Linux):
+```bash
+python3 -m http.server 8080
+```
+Then open [http://localhost:8080](http://localhost:8080) in your browser.
+
+With Node.js:
+```bash
+npx serve .
+```
+Then open the URL shown in the terminal.
+
+To stop the server press `Ctrl+C` in the terminal.
+
+## Building
+
+There is no build step — the site is already static HTML/CSS/JS and ready to deploy as-is.
+
+## Deploying
+
+To publish the site, upload all project files to your web hosting via FTP:
+
+1. Connect to your hosting using an FTP client (e.g. [FileZilla](https://filezilla-project.org), free)
+2. Navigate to the public directory (usually `public_html` or `www`)
+3. Upload everything **except**: `README.md`, `CLAUDE.md`, and the Lighthouse report files (`*.report.html`, `*.report.json`)
+4. Your site will be live immediately — no restart needed
+
+Files to upload:
+```
+index.html
+gallery.html
+schedule.html
+robots.txt
+sitemap.xml
+css/
+js/
+images/
+```
+
