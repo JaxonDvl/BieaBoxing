@@ -470,19 +470,6 @@ html.theme-electric .contact__map {
   border-radius: 0;
 }
 
-html.theme-electric .form-group input,
-html.theme-electric .form-group textarea {
-  border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid transparent;
-}
-
-html.theme-electric .form-group input:focus,
-html.theme-electric .form-group textarea:focus {
-  border-color: rgba(212, 255, 0, 0.3);
-  border-left: 3px solid var(--color-red);
-  box-shadow: 0 0 10px rgba(212, 255, 0, 0.1);
-}
 
 /* --- FOOTER --- */
 html.theme-electric .footer {
@@ -1821,9 +1808,9 @@ html.theme-electric .events__hero-photo {
 
 .contact__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: stretch;
 }
 
 .contact__item {
@@ -1863,59 +1850,17 @@ html.theme-electric .events__hero-photo {
 }
 
 .contact__map {
-  margin-top: 48px;
   border-radius: var(--border-radius);
   overflow: hidden;
+  min-height: 400px;
 }
 
-/* Contact Form */
-.contact__form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.contact__map iframe {
+  display: block;
+  height: 100%;
+  min-height: 400px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--color-gray-400);
-}
-
-.form-group input,
-.form-group textarea {
-  background-color: var(--color-surface);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--border-radius-sm);
-  padding: 14px 16px;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--color-white);
-  transition: border-color var(--transition);
-  outline: none;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--color-gray-600);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--color-red);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
 
 /* ========================================
    FOOTER
@@ -2599,6 +2544,11 @@ html.theme-electric .events__hero-photo {
   .contact__grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .contact__map,
+  .contact__map iframe {
+    min-height: 300px;
   }
 
   .footer__grid {

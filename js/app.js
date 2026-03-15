@@ -15,7 +15,6 @@ const App = {
     this.renderSchedule();
     this.renderTrainers();
     this.renderFightRecord();
-    this.setupContactForm();
     this.setupSmoothScroll();
     this.setupBackToTop();
     this.setCurrentYear();
@@ -329,27 +328,6 @@ const App = {
           <td data-label="Result"><span class="${resultClass}">${fight.method}</span></td>
         </tr>`;
     }).join('');
-  },
-
-  // ========================================
-  // CONTACT FORM
-  // ========================================
-  setupContactForm() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-      // If using Formspree, let it handle submission.
-      // If no Formspree ID is set, open WhatsApp instead.
-      const action = form.getAttribute('action');
-      if (action && action.includes('YOUR_FORM_ID')) {
-        e.preventDefault();
-        const name = form.querySelector('#name').value;
-        const message = form.querySelector('#message').value;
-        const text = encodeURIComponent(`Buna ziua, sunt ${name}. ${message}`);
-        window.open(`https://wa.me/40741744063?text=${text}`, '_blank');
-      }
-    });
   },
 
   // ========================================
