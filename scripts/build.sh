@@ -9,7 +9,7 @@ rm -rf "$DIST"
 mkdir -p "$DIST/js" "$DIST/css"
 
 echo "Copying static files..."
-cp index.html gallery.html schedule.html robots.txt sitemap.xml "$DIST/"
+cp index.html gallery.html schedule.html coming-soon.html robots.txt sitemap.xml "$DIST/"
 cp -r images "$DIST/"
 
 echo "Minifying JS..."
