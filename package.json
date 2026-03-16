@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "python3 -m http.server 8080",
     "build": "bash scripts/build.sh",
+    "postinstall": "bash scripts/build.sh",
     "deploy": "npm run build && wrangler versions upload"
   },
   "devDependencies": {
