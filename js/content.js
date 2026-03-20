@@ -220,7 +220,7 @@ const siteContent = {
           ro: "Antrenamente cu clasa, grup restrâns și private. Box Amator: 316 meciuri (298V / 18Î), 8× Campion Național, 3× Campion European, 1× Campion Mondial, 2× Vice-campion Mondial. Box Profesionist: 24V / 2Î — 1× Campion WBA Continental, 2× WBC Continental, 4× IBA Intercontinental, 1× Campion Mondial IBA.",
           en: "Group, small-group and private sessions. Amateur Boxing: 316 bouts (298W / 18L), 8× National Champion, 3× European Champion, 1× World Champion, 2× World Runner-up. Pro Boxing: 24W / 2L — 1× WBA Continental, 2× WBC Continental, 4× IBA Intercontinental, 1× IBA World Champion.",
         },
-        image: "images/trainers/flavius-biea.jpeg",
+        image: "images/trainers/flavius-biea.webp",
         schedule: [
           { days: { ro: "Luni, Miercuri, Vineri", en: "Mon, Wed, Fri" }, time: "18:00 – 19:30", class: { ro: "Grupa A — Box", en: "Group A — Boxing" }, type: "boxing-a" },
         ],
@@ -233,7 +233,7 @@ const siteContent = {
           ro: "Antrenor Box cu 4 ani experiență. Antrenamente cu clasa și private. Box Amator: 8 ani experiență, 2× Vicecampion Național, multiplu medaliat la turnee naționale și internaționale. Box Profesionist: 5 victorii (4 KO) și 1 înfrângere.",
           en: "Boxing Coach with 4 years of coaching experience. Group and private sessions. Amateur Boxing: 8 years experience, 2× National Runner-up, multiple medals at national and international tournaments. Pro Boxing: 5 wins (4 KO) and 1 loss.",
         },
-        image: "images/trainers/claudiu-ienci.jpeg",
+        image: "images/trainers/claudiu-ienci.webp",
         schedule: [
           { days: { ro: "Marți, Joi", en: "Tue, Thu" }, time: "18:30 – 20:00", class: { ro: "Grupa 5 — Box", en: "Group 5 — Boxing" }, type: "boxing-5" },
           { days: { ro: "Marți, Joi", en: "Tue, Thu" }, time: "20:00 – 21:30", class: { ro: "Grupa B — Box", en: "Group B — Boxing" }, type: "boxing-b" },
@@ -249,7 +249,7 @@ const siteContent = {
           ro: "Antrenamente cu grupul și private. 3× Campion Național la lupte libere, 6× Vicecampion Național lupte libere, 2014–2019 component al lotului național de lupte libere, 2020 luptător profesionist MMA.",
           en: "Group and private sessions. 3× National Freestyle Wrestling Champion, 6× National Runner-up, 2014–2019 member of the national wrestling team, 2020 professional MMA fighter.",
         },
-        image: "images/trainers/flavius-andrei.jpeg",
+        image: "images/trainers/flavius-andrei.webp",
         schedule: [],
       },
       {
@@ -260,7 +260,7 @@ const siteContent = {
           ro: "Antrenor Box specializat în: Managementul Greutății, Coaching Box, Programe de Forță și Condiționare pentru sport, Antrenament pentru Evenimente Speciale (Tough Mudder, Maraton etc.).",
           en: "Boxing Trainer specializing in: Weight Management, Boxing Coaching, Strength & Conditioning Programmes for sport, Special Event Training (Tough Mudder, Marathon etc.).",
         },
-        image: "images/trainers/gheorghe-tudosie.jpeg",
+        image: "images/trainers/gheorghe-tudosie.webp",
         schedule: [],
       },
       {
@@ -271,7 +271,7 @@ const siteContent = {
           ro: "Instructor Box și Kickbox cu 4 ani experiență. Antrenamente cu clasa și private. 10 ani Karate Wu-Thao (Centură Verde), 2 ani Karate Shotokan, 7 ani Kickbox — multiplă medaliată la competiții naționale (3 medalii Locul 1), 4 ani Box.",
           en: "Boxing & Kickboxing Instructor with 4 years of coaching experience. Group and private sessions. 10 years Karate Wu-Thao (Green Belt), 2 years Karate Shotokan, 7 years Kickboxing — multiple national medals (3× 1st place), 4 years Boxing.",
         },
-        image: "images/trainers/mariana-condescu.jpeg",
+        image: "images/trainers/mariana-condescu.webp",
         schedule: [
           { days: { ro: "Luni, Miercuri, Vineri", en: "Mon, Wed, Fri" }, time: "20:00 – 21:30", class: { ro: "Kickbox", en: "Kickboxing" }, type: "kickboxing" },
           { days: { ro: "Marți, Joi", en: "Tue, Thu" }, time: "17:30 – 18:30", class: { ro: "Copii (4–12 ani)", en: "Kids (4–12 yrs)" }, type: "kids" },
