@@ -1078,6 +1078,39 @@ button {
   margin-bottom: 20px;
 }
 
+.about__intro {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.about__quote {
+  margin: 28px 0;
+  padding: 20px 24px;
+  border-left: 3px solid var(--color-accent);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.about__quote p {
+  font-size: 1rem;
+  color: var(--color-gray-300);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.about__quote p:last-of-type {
+  margin-bottom: 16px;
+}
+
+.about__signature {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-white);
+  font-style: normal;
+}
+
 .about__photo-wrap {
   margin-top: 32px;
   border-radius: var(--border-radius);

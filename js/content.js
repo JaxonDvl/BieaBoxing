@@ -44,13 +44,41 @@ const siteContent = {
   about: {
     tag:    { ro: "Despre Noi",                  en: "About Us" },
     title:  { ro: "Mai mult decât o sală de box în Timișoara", en: "More than a boxing gym in Timișoara" },
+    intro: {
+      ro: "Totul a început cu o pasiune. A devenit un standard.",
+      en: "It all started with a passion. It became a standard.",
+    },
     story1: {
-      ro: "Fondată în 2014 de campionul național Flavius Biea și Roxana Biea, Biea Boxing este cea mai importantă sală de box din Timișoara. Între 2019-2023, evenimentele Biea Promotion au fost singurele gale de box recunoscute la nivel național și licențiate internațional din România.",
-      en: "Founded in 2014 by national champion Flavius Biea and Roxana Biea, Biea Boxing is Timișoara's premier boxing gym. Between 2019-2023, Biea Promotion events were the only nationally recognized and internationally licensed boxing galas in Romania.",
+      ro: "În 2014, Flavius și Roxana Biea au pus bazele Biea Promotion, transformând dragostea pentru box într-o viziune: evenimente de nivel înalt, construite cu respect pentru sport și pentru sportivi.",
+      en: "In 2014, Flavius and Roxana Biea founded Biea Promotion, turning a love for boxing into a vision: high-level events built with respect for the sport and for the athletes.",
     },
     story2: {
-      ro: "Biea Boxing Gym este sala de box profesionistă din Timișoara care oferă cursuri de box, kickboxing, MMA, autoapărare și programe pentru copii. Indiferent dacă ești începător sau boxer avansat, antrenorii noștri te ghidează către obiectivele tale.",
-      en: "Biea Boxing Gym is Timișoara's professional boxing facility offering boxing, kickboxing, MMA, self-defense, and kids programs. Whether you're a complete beginner or an advanced fighter, our trainers guide you towards your goals.",
+      ro: "De atunci, fiecare gală a însemnat mai mult decât un eveniment — a fost o experiență, transmisă publicului din România și din întreaga lume.",
+      en: "Since then, every gala has meant more than just an event — it has been an experience, broadcast to audiences in Romania and around the world.",
+    },
+    story3: {
+      ro: "Între 2019 și 2023, am ridicat standardele boxului profesionist din România, fiind singurii organizatori ale căror gale au fost recunoscute și licențiate internațional.",
+      en: "Between 2019 and 2023, we raised the standards of professional boxing in Romania, being the only organizers whose galas were nationally recognized and internationally licensed.",
+    },
+    story4: {
+      ro: "Astăzi, continuăm să construim viitorul boxului — susținând performanța, descoperind campioni și inspirând o nouă generație.",
+      en: "Today, we continue to build the future of boxing — supporting performance, discovering champions, and inspiring a new generation.",
+    },
+    quote1: {
+      ro: "„Biea Promotion nu este doar despre box. Este despre oameni, despre visuri și despre curajul de a începe, indiferent de punctul din care pleci.",
+      en: "\u201cBiea Promotion is not just about boxing. It\u2019s about people, about dreams, and about the courage to start, no matter where you begin.",
+    },
+    quote2: {
+      ro: "Știm că, uneori, există temeri, preconcepții sau motive care îi țin pe oameni departe de sporturile de contact. Însă credem cu tărie că boxul nu este doar despre luptă — este despre disciplină, echilibru și încredere în sine. De aceea, îi încurajăm pe toți cei care ne descoperă să aibă curajul de a face primul pas.",
+      en: "We know that sometimes fears, preconceptions, or reasons keep people away from contact sports. But we firmly believe that boxing is not just about fighting \u2014 it\u2019s about discipline, balance, and self-confidence. That\u2019s why we encourage everyone who discovers us to have the courage to take the first step.",
+    },
+    quote3: {
+      ro: "Ușile noastre sunt deschise pentru fiecare dintre voi. Vă așteptăm să deveniți parte din povestea noastră.\u201d",
+      en: "Our doors are open to each of you. We look forward to you becoming part of our story.\u201d",
+    },
+    signature: {
+      ro: "Roxana & Flavius Biea",
+      en: "Roxana & Flavius Biea",
     },
   },
 
