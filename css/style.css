@@ -1933,6 +1933,19 @@ html.theme-electric .events__hero-photo {
   transform: scale(1.06);
 }
 
+.sponsors__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  padding: 0 var(--container-padding, 24px);
+}
+
+.sponsors__whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* ========================================
    CONTACT
    ======================================== */
