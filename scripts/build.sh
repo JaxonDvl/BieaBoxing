@@ -11,6 +11,7 @@ mkdir -p "$DIST/js" "$DIST/css"
 echo "Copying static files..."
 cp index.html gallery.html schedule.html coming-soon.html robots.txt sitemap.xml "$DIST/"
 cp -r images "$DIST/"
+rm -rf "$DIST/images/_originals"
 
 echo "Minifying JS..."
 for f in "${JS_FILES[@]}"; do
