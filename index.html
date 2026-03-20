@@ -626,6 +626,29 @@
     </div>
   </div>
 
+  <!-- ========== FORMULAR 230 BANNER ========== -->
+  <div id="formular230-banner" class="formular230-banner">
+    <button class="formular230-banner__close" id="formular230Close" aria-label="Închide bannerul">&times;</button>
+    <p class="formular230-banner__text">
+      Susține-ne! Redirecționează 3,5% din impozitul pe venit către Biea Boxing.
+      <a href="#" class="formular230-banner__link" id="formular230Link">Completează formularul aici.</a>
+    </p>
+  </div>
+
+  <!-- ========== FORMULAR 230 MODAL ========== -->
+  <div id="formular230-modal" class="formular230-modal">
+    <div class="formular230-modal__backdrop" id="formular230Backdrop"></div>
+    <div class="formular230-modal__content">
+      <div class="formular230-modal__header">
+        <h3 class="formular230-modal__title">Redirecționează 3,5% din impozit</h3>
+        <button class="formular230-modal__close" id="formular230ModalClose" aria-label="Închide formularul">&times;</button>
+      </div>
+      <div class="formular230-modal__body">
+        <div class="f230ro-formular"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
   <a href="https://wa.me/40741744063?text=Buna%20ziua%2C%20As%20dori%20mai%20multe%20detalii%20despre%20BieaBoxing%20Gym."
      class="whatsapp-btn"
@@ -638,6 +661,39 @@
     </svg>
     <span class="whatsapp-btn__tooltip" data-i18n="whatsapp.tooltip">Contactează-ne pe WhatsApp</span>
   </a>
+
+  <!-- Formular 230 -->
+  <script src="https://formular230.ro/share/99c5be73d80"></script>
+  <script>
+    (function() {
+      const banner = document.getElementById('formular230-banner');
+      const closeBtn = document.getElementById('formular230Close');
+      const link = document.getElementById('formular230Link');
+      const modal = document.getElementById('formular230-modal');
+      const modalClose = document.getElementById('formular230ModalClose');
+      const backdrop = document.getElementById('formular230Backdrop');
+
+      banner.classList.add('is-visible');
+
+      closeBtn.addEventListener('click', function() {
+        banner.classList.remove('is-visible');
+      });
+
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+    })();
+  </script>
 
   <!-- Scripts -->
   <script src="js/config.js"></script>
